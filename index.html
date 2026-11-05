@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<neta charset="UTF-8">
+	 <title> kim sheepadoodle puppy paradise</title>
+	 <meta name="description" content="=Discover adorable Sheepadoodle puppies at Sheepadoodle Puppy Paradise. view available puppies, learn about their care, and send a reservation request.">
+	 <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+body {
+	background-color: #f5f0e8;
+font-family: arial, sans-serif;
+text-align: center;
+margin: 0;
+line-height: 1.6;
+color: #444444;
+}
+h1{
+	color:#5b3924;
+	font-size: 36px;
+	margin-bottom: 15px;
+	margin-top: 30px;
+	text-shadow: 2px 2px 4px; #cccccc;
+
+}
+#home{
+	text-transform:capitalize;
+}
+	p{
+ color:#444444;
+font-size:18px;
+line-height: 1.6;
+ }
+
+nav {background-color:#5b3924;
+padding:15px;
+position: sticky;
+top: 0;
+z-index: 1000;
+margin-bottom: 20px;
+}
+nav a {
+	color: white;
+	text-decoration: none;
+	margin: 15px;
+	font-weight: bold;
+} 
+.puppy-card {
+	overflow: hidden;
+	background-color: white;
+	padding: 20px;
+	margin: 30px auto;
+	width: 350px;
+	max-width: calc(100% 40px);
+	box-sizing: border-box;
+	border-radius: 15px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	border: 1px solid #eeeeee;
+}
+.puppy-card img {
+	display: block;
+	width: 300px;
+	max-width: 100%;
+	height: 250px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 10px;
+	margin: 0 auto 15px;
+}
+
+.puppy-card img {
+	transition: transform 0.3s ease;
+}
+.puppy-card img:hover {
+	transform: scale(1.05f);
+}
+.puppy-card a:  {
+	display: inline-block;
+	background-color: #5b3924;
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+.puppy-card a:hover {
+	background-color: #8b5e3c;
+}
+.puppy-container {
+	display: flex;
+	flex-wrap: ap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	gap:25px;
+	padding: 30px 20px;
+}
+.puppy-container   .puppy-card {
+	margin: 0;
+	width:280px;
+	max-width: 100%;
+	box-sizing: border-box;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+} 
+.puppy-container .puppy-card: {
+	transition: transform 0.3s ease,box-shadow 0.3s ease;
+	
+}
+.puppy-container .puppy-card:hover {
+	transform: translateY(8px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+/*Mobile-friendly design */
+@medai (max-width: 600px) {
+	.puppy-container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.puppy-card {
+		width:100%;
+		max-width: 350PX;
+	}
+	h1 {
+		font-size: 26px}
+}
+
+nav a {
+	margin: 8px;
+	font-size: 13px;
+   }
+}
+
+#contact {
+		background-color: white;
+		max-width: 800px;
+		margin: 40px auto;
+		padding: 30px;
+		border-radius: 15px;
+		box-shadow: 0 4px 10px rgba(0,  0,  0,  0.1);
+	}
+	#contact h2 {
+		color: #5b3924;
+		font-size: 28px;
+		margin-bottom: 15px;
+	}
+	#contact p {
+		color: #444444;
+		font-size: 16px;
+		line-height: 1.8;
+	}
+	#contact a {
+		color: #5b3924;
+		font-weight: bold;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+	#contact a:hover {
+		color: #8b5e3c;
+		text-decoration: underline;
+	}
+	#about {
+		background-color: white;
+		max-width: 800px;
+		margin: 40px auto;
+		padding: 30px;
+		border-radius: 15px;
+		border-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	}
+	#about h2 {
+		color: #5b3924;
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+	#about p {
+		color: #444444;
+		font-size: 16px;
+		line-height: 1.8;
+	}
+	footer {
+		background-color: #5b3924;
+		color: white;
+		padding: 20px;
+		margin-top: 40px;
+		text-align: center;
+		font-size: 14px;
+	}
+	footer p {
+		color: white;
+		margin: 0;
+		line-height: 1.6;
+	}
+	#puppySearch {
+		width: 90%;
+		max-width: 400px;
+		padding: 12px 15px;
+		margin: 20px auto;
+		display: block;
+		border: 2px solid #5b3924;
+		border-radius: 8px;
+		font-size: 16px;
+		outline: none;
+		box-sizing: border-box;
+
+	}
+	#puppySearch:focus {
+		background-color: #8b5e3c;
+		box-shadow: 0 0 5px rgba(91, 57, 36, 0.3);
+	}
+
+	/* Reservation form styling */
+#reservation {
+    background-color: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#reservation label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#reservation input,
+#reservation select,
+#reservation textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#reservation button {
+    background-color: #5b3924;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#reservation button:hover {
+    background-color: #8b5e3c;
+}
+#why-choose-us {
+    background-color: #f0f8ff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    margin: 20px;
+}
+
+.feature {
+    background-color: white;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+#reviews {
+    background-color: #f0f8ff;
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.review-card {
+    background-color: white;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.availability {
+	display: inline-block;
+	background-color: #28a745;
+	color: white;
+	padding: 5px 12px;
+	border-radius: 20px;
+	font-size: 13px;
+	font-weight: bold;
+}
+#backToTop {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+}
+</style>
+
+</head>
+<body>
+	<nav>
+		<a href="#home">Home</a>
+		<a href="#puppies">Our Puppies</a>
+		<a href="#about">About Us</a>
+		<a href="#why-choose-us">Why Choose Us</a>
+		<a href="#faq">FAQs</a>
+		<a href="#contact">Contact</a>
+		<a href="#reservation">Reservation</a>
+	</nav>
+	<h1 id="home">welcome to Kim sheepdoodle puppy paradise!</h1>
+		<p>Discover our adorable Sheepadoodle puppies.</p>
+		
+		<section id="puppies">
+
+			<h2>Meet Our Sheepadoodle Puppies</h2>
+			<input type="text"
+			id="puppySearch"
+			placeholder="Search puppies by name..."
+			>
+
+			<div class="puppy-container">
+
+				<div class="puppy-card">
+					<img src="Max.jpeg"
+					alt="sheepadoodle puppy">
+					<h3>Max</h3>
+					<p class="availability">Available</p>
+
+					<p>Meet Max,an adorable Sheepadoodle his 12 weeks old comes with all paperwork and shots with a health guarantee!</p>
+
+					<p><strong>Price:</strong> $850</p>
+
+					<a href="#reservation">Inquire About Max</a>
+				</div>
+
+					
+						<div class="puppy-card">
+							<img src="Nino.jpeg"
+							alt="Sheepadoodle puppy">
+
+							<h3>Nino</h3>
+							<p class="availability">Available</p>
+							<p>Meet Nino,a sweet handsome boy 12 weeks old comes with all paperwork and shots with a health guarantee!</p>
+
+							<P><strong>Price:</strong> $850</P>
+
+							<a href="#reservation">Inquire About Nino</a>
+					</div>
+				
+				<div class="puppy-card">
+					<img src="Bella.jpeg"
+					alt="Sheepadoodle puppy">
+
+					<h3>Bella</h3>
+                    <p class="availability">Available</p>
+					<p>Meet Bella,a lovely beautiful sheepadoodle she 12 weeks old comes with all paparwork and shots with a health guarantee!</p>
+
+					<p><strong>Price:</strong> $850</p>
+
+					<a href="#reservation">Inquire About Bella</a>
+
+				</div>
+
+				<div class="puppy-card">
+					<img src="Nala.jpeg"
+					alt="Sheepadoodle puppy">
+
+					<h3>Nala</h3>
+					<p class ="availability">Available</p>
+
+					<p>Meet Nala, a lovely Sheepadoodle  she 12 weeks old comes with all paparwork and shots with a health guarantee!</p>!</p>
+
+					<p><strong>Price:</strong> $850</p>
+
+					<a href="#reservation">Inquire About Nala</a>
+				</div>
+
+			</div>
+			</section>
+
+		<section id="about">
+		<h2>About Us</h2>
+		<p>Welcome to Kim Sheepadoodle Puppy Paradise!
+			We love raising happy, healthy, and adorable Sheepadoodle puppies.
+		Our goal is to help every puppy find a loving home.</p>
+	</section>
+	<section id="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <p>We are dedicated to raising happy, healthy, and well-loved Sheepadoodle puppies.</p>
+
+    <div class="feature">
+        <h3>🐶 Loving Care</h3>
+        <p>Our puppies receive care, attention, and socialization.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🩺 Health Records</h3>
+        <p>We provide available veterinary and vaccination records.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🏡 Family Support</h3>
+        <p>We help families prepare to welcome their new puppy home.</p>
+    </div>
+</section>
+
+	<section id="reviews">
+    <h2>What Our Customers Say</h2>
+    <p>We love hearing from families who welcome our puppies into their homes.</p>
+
+    <div class="review-card">
+        <h3>Happy Puppy Families</h3>
+        <p>Customer reviews will appear here.</p>
+    </div>
+</section>
+	
+
+		<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="feature">
+        <details>
+        	<summary>Are your puppies avaibable?</summary>
+        <p>Please check our puppy listings for current availability.</p>
+    </details>
+    </div>
+
+    <div class="feature">
+    	<details>
+        <summary>Do puppies come with health records?</summary>
+        <p>Yes, available veterinary and vaccination records are provided.</p>
+    </details>
+    </div>
+
+    <div class="feature">
+    	<details>
+        <summary>Can I reserve a puppy?</summary>
+        <p>Yes! Complete our reservation form to send an inquiry.</p>
+    </details>
+    </div>
+
+    <div class="feature">
+    	<details>
+        <summary>Do you offer delivery?</summary>
+        <p>Contact us to discuss available delivery and pickup arrangements.</p>
+    </details>
+    </div>
+</section>
+<section id="contact">
+		<h2>Contact us</h2>
+		<p>Interested in our Sheepadoodle puppies? We'd love to hear from you!</p>
+
+		<p>Email:  <a href="mailto:jeankimberly819@gmail.com">jeankimberly819@gmail.com</a></p>
+
+		<p>Phone:  <a href="tel:8502205838">8502205838</a></p>
+		</section>
+		<section id="reservation">
+			<h2>Reserve a Puppy</h2>
+			<p>Complete the form to request a reservation.</p>
+
+			<form id="reservationForm">
+				
+				<label for="customerName">Full Name:</label>
+				<input type="text" id="customerName" name="customerName" required>
+
+				<label for="customerEmail">Email:</label>
+				<input type="email" id="customerEmail" name="customerEmail" required>
+
+				<label for="puppyName">Choose Puppy:</label>
+				<select id="puppyName" name="puppyName" required>
+					<option value="">Select a puppy:</option>
+					<option value="Max">Max</option>
+					<option value="Bella">Bella</option>
+					<option value="Nala">Nala</option>
+					<option value="Nino">Nino</option>
+				</select>
+
+				<label for="reservationMessage"> Message:</label>
+				<textarea id="reservationMessage" name="reservationMessage" rows="4"></textarea>
+
+				<button type="submit">Request Reservation</button>
+			</form>
+		<p id="successfullyMessage" style="display: none; color: green;">
+    Thank you! Your reservation request has been sent successfully. We will contact you soon.
+</p>
+
+		</section>
+		<footer>
+		<p>&copy; 2026 Kim sheepadoodle Puppy Paradise.
+		</footer>
+		<button id= "backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+			Back to Top
+		</button>
+		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+		<script>
+			
+			emailjs.init({
+				publicKey: "sOB4wVHe6cGczmcOY"
+			});
+		
+			const searchBox = document.getElementById("puppySearch");
+			const puppyCards = document.querySelectorAll(".puppy-card");
+			searchBox.addEventListener("input", function () {
+				const searchText = searchBox.value.toLowerCase();
+
+				puppyCards.forEach(function (card) {
+					const puppyName = card.querySelector("h3").textContent.toLowerCase();
+
+					if (puppyName.includes(searchText)) {
+						card.style.display = "";
+					} else {
+						card.style.display ="none";
+		           }
+		       });
+			});
+
+		
+// EmailJS reservation form
+const reservationForm = document.getElementById("reservationForm");
+
+reservationForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm(
+        "service_emwme7x",
+        "template_z5h3jag",
+        reservationForm,
+        {
+            publicKey: "sOB4wVHe6cGczmcOY"
+        }
+    ).then(function() {
+       document.getElementById("successfullyMessage").style.display ="block";
+        reservationForm.reset();
+    }, function(error) {
+        
+        console.log(error);
+    });
+});
+		</script>
+	</body>
+	</html>
